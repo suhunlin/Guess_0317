@@ -1,5 +1,6 @@
 package com.suhun.guess0317
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.WindowCompat
@@ -65,7 +66,15 @@ class MainActivity : AppCompatActivity() {
         AlertDialog.Builder(this)
             .setTitle("Guess Result")
             .setMessage(resutMessage).setPositiveButton("ok", {dialog, which->
-                binding.contentLayout.userInput.text = null
+
+                if(bingo){
+                    val intent:Intent = Intent(this, RecordActivity::class.java)
+                    intent.putExtra("COUNT", secretNumber.guessCount)
+                    intent.putExtra("NAME", binding.contentLayout.nameInput.text.toString())
+                    startActivity(intent)
+                }else{
+                    binding.contentLayout.userInput.text = null
+                }
             })
             .show()
     }
