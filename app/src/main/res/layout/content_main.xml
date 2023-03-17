@@ -25,9 +25,10 @@
         android:layout_marginTop="28dp"
         android:layout_marginEnd="80dp"
         android:ems="10"
+        android:gravity="center_horizontal"
+        android:hint="Please input your name"
         android:inputType="textPersonName"
         android:minHeight="48dp"
-        android:text="Please input your name"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -38,9 +39,9 @@
         android:layout_marginTop="123dp"
         android:ems="10"
         android:gravity="center_horizontal"
+        android:hint="0"
         android:inputType="numberDecimal"
         android:minHeight="48dp"
-        android:text="0"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -60,7 +61,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:text="Button"
+        android:onClick="checkGuess"
+        android:text="Guess"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/count" />
